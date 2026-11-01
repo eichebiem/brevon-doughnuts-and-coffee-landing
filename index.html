@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brevon Doughnuts &amp; Coffee | Your Daily Dose of Delight</title>
+  <meta name="description" content="Freshly made doughnuts and coffee at SM City Rosales, Pangasinan. 12 flavors starting at ₱44.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Reusable doughnut illustration. Glaze colour comes from CSS `color`. -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true">
+    <symbol id="donut" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="31" fill="none" stroke="#D9A35B" stroke-width="36"/>
+      <path d="M50 22 C60 21 70 25 76 33 C82 41 80 47 81 55 C82 64 76 72 67 77 C59 81 50 79 42 80 C33 81 25 74 21 66 C17 58 20 50 19 43 C19 34 27 27 35 24 C40 22 45 22 50 22 Z
+               M50 37 A13 13 0 1 0 50.01 37 Z" fill="currentColor" fill-rule="evenodd"/>
+      <g class="sprinkles">
+        <rect x="38" y="27" width="7" height="2.4" rx="1.2" fill="#fff" transform="rotate(-25 41 28)"/>
+        <rect x="60" y="30" width="7" height="2.4" rx="1.2" fill="#E3B65C" transform="rotate(35 63 31)"/>
+        <rect x="70" y="52" width="7" height="2.4" rx="1.2" fill="#fff" transform="rotate(80 73 53)"/>
+        <rect x="56" y="68" width="7" height="2.4" rx="1.2" fill="#9EC3F0" transform="rotate(-15 59 69)"/>
+        <rect x="30" y="62" width="7" height="2.4" rx="1.2" fill="#E3B65C" transform="rotate(50 33 63)"/>
+        <rect x="25" y="42" width="7" height="2.4" rx="1.2" fill="#9EC3F0" transform="rotate(-70 28 43)"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="announcement">
+    Now open at <strong>SM City Rosales</strong> &middot; 12 flavors starting at ₱44
+  </div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand">
+        <img src="../assets/images/logo.jpg" alt="Brevon Doughnuts &amp; Coffee logo" class="brand__logo">
+        <span class="brand__name">Brevon</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#menu" class="nav__link">Menu</a>
+        <a href="#story" class="nav__link">Our Story</a>
+        <a href="#pricing" class="nav__link">Pricing</a>
+        <a href="#reviews" class="nav__link">Reviews</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+        <a href="#contact" class="btn btn--gold btn--sm">Visit Us</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <p class="eyebrow">Doughnuts &amp; Coffee &middot; Rosales, Pangasinan</p>
+          <h1 class="hero__title">Your daily dose of <em>delight.</em></h1>
+          <p class="hero__text">
+            Soft, freshly made doughnuts in twelve flavors, from classic sprinkles
+            to Tiramisu and Matcha Almond. Perfect for merienda, pasalubong,
+            or a little treat for yourself.
+          </p>
+          <div class="hero__actions">
+            <a href="#menu" class="btn btn--navy">See the Menu</a>
+            <a href="#contact" class="btn btn--outline">Find Our Booth</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>12</strong><span>Flavors</span></li>
+            <li><strong>₱44</strong><span>Starts at</span></li>
+            <li><strong>100%</strong><span>Proudly local</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="arch">
+            <img src="../assets/images/display-case.jpg" alt="Brevon doughnut display case with flavor labels">
+          </div>
+          <div class="badge badge--price">
+            <span>from</span>
+            <strong>₱44</strong>
+          </div>
+          <svg class="hero__donut hero__donut--a" style="color:#F49AC1" aria-hidden="true"><use href="#donut"/></svg>
+          <svg class="hero__donut hero__donut--b" style="color:#5A3825" aria-hidden="true"><use href="#donut"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="strip">
+      <div class="container strip__inner">
+        <p>Freshly made daily</p>
+        <span class="strip__dot" aria-hidden="true"></span>
+        <p>Perfect for pasalubong</p>
+        <span class="strip__dot" aria-hidden="true"></span>
+        <p>SM for MSMEs partner</p>
+        <span class="strip__dot" aria-hidden="true"></span>
+        <p>Coffee that pairs perfectly</p>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section class="section" id="menu">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Our Doughnut Lineup</p>
+          <h2 class="section__title">Pick your favorite</h2>
+          <p class="section__text">Twelve flavors, two simple prices. Filter to find yours.</p>
+        </header>
+
+        <div class="filters reveal" role="tablist" aria-label="Filter flavors">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All Flavors</button>
+          <button class="filter" data-filter="classic" role="tab" aria-selected="false">Classics &middot; ₱44</button>
+          <button class="filter" data-filter="premium" role="tab" aria-selected="false">Premium &middot; ₱49</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Classics: ₱44 -->
+          <article class="flavor reveal" data-category="classic">
+            <svg class="flavor__img" style="color:#F49AC1" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Strawberry Sprinkles</h3>
+            <p class="flavor__desc">Pink strawberry glaze with a shower of rainbow sprinkles.</p>
+            <span class="flavor__price">₱44</span>
+          </article>
+          <article class="flavor reveal" data-category="classic">
+            <svg class="flavor__img" style="color:#5A3825" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Chocolate Sprinkles</h3>
+            <p class="flavor__desc">Rich chocolate glaze topped with colorful sprinkles.</p>
+            <span class="flavor__price">₱44</span>
+          </article>
+          <article class="flavor reveal" data-category="classic">
+            <svg class="flavor__img" style="color:#3B2418" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Nutty Dark Choco</h3>
+            <p class="flavor__desc">Dark chocolate glaze with a crunchy nut topping.</p>
+            <span class="flavor__price">₱44</span>
+          </article>
+          <article class="flavor reveal" data-category="classic">
+            <svg class="flavor__img" style="color:#C98A4B" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Dulce de Leche</h3>
+            <p class="flavor__desc">Sweet, creamy caramel for the classic sweet tooth.</p>
+            <span class="flavor__price">₱44</span>
+          </article>
+
+          <!-- Premium: ₱49 -->
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#F3EBDD" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Coconut Cream</h3>
+            <p class="flavor__desc">Light coconut cream with toasted coconut flakes.</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#4A2C1D" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Choco Custard</h3>
+            <p class="flavor__desc">Chocolate-topped and filled with smooth custard.</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#E6E0D6" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Cookies N' Cream</h3>
+            <p class="flavor__desc">Vanilla cream loaded with crushed chocolate cookies.</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#FBF8F2" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Almond Snow Bliss</h3>
+            <p class="flavor__desc">Snowy sugar dusting with sliced almonds.</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#9BBF6A" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Matcha Almond</h3>
+            <p class="flavor__desc">Earthy matcha glaze finished with almonds.</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#6B3E26" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Nutella</h3>
+            <p class="flavor__desc">Generous hazelnut chocolate spread. Need we say more?</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#B8946A" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Tiramisu</h3>
+            <p class="flavor__desc">Coffee-kissed cream with a dusting of cocoa.</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+          <article class="flavor reveal" data-category="premium">
+            <svg class="flavor__img" style="color:#F7C6D4" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Strawberry Shortcake</h3>
+            <p class="flavor__desc">Strawberry cream and cake crumbs, like a slice of shortcake.</p>
+            <span class="flavor__price">₱49</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STORY ============ -->
+    <section class="section section--navy" id="story">
+      <div class="container story">
+        <div class="story__media reveal">
+          <img src="../assets/images/booth.jpg" alt="The Brevon booth at SM City Rosales">
+        </div>
+        <div class="story__copy reveal">
+          <p class="eyebrow eyebrow--gold">Our Story</p>
+          <h2 class="section__title section__title--light">Small booth. Big delight.</h2>
+          <p>
+            Brevon started with a simple idea: everyone deserves a little moment of
+            sweetness in their day. Today you'll find us at our green-and-white booth
+            at SM City Rosales, proudly part of the SM for MSMEs program that
+            supports local entrepreneurs.
+          </p>
+          <p>
+            Every doughnut is made to be enjoyed fresh, best with a warm cup of coffee
+            and good company.
+          </p>
+          <a href="#contact" class="btn btn--gold">Come Say Hello</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section section--cream" id="pricing">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Simple Pricing</p>
+          <h2 class="section__title">Two prices. Zero guesswork.</h2>
+          <p class="section__text">Mix and match any flavors you like.</p>
+        </header>
+
+        <div class="pricing">
+          <article class="price-card reveal">
+            <h3 class="price-card__name">The Classics</h3>
+            <p class="price-card__price"><span>₱</span>44 <small>each</small></p>
+            <ul class="price-card__list">
+              <li>Strawberry Sprinkles</li>
+              <li>Chocolate Sprinkles</li>
+              <li>Nutty Dark Choco</li>
+              <li>Dulce de Leche</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline btn--block">Order Classics</a>
+          </article>
+
+          <article class="price-card price-card--featured reveal">
+            <span class="price-card__tag">Crowd Favorite</span>
+            <h3 class="price-card__name">The Premiums</h3>
+            <p class="price-card__price"><span>₱</span>49 <small>each</small></p>
+            <ul class="price-card__list price-card__list--2col">
+              <li>Coconut Cream</li>
+              <li>Choco Custard</li>
+              <li>Cookies N' Cream</li>
+              <li>Almond Snow Bliss</li>
+              <li>Matcha Almond</li>
+              <li>Nutella</li>
+              <li>Tiramisu</li>
+              <li>Strawberry Shortcake</li>
+            </ul>
+            <a href="#contact" class="btn btn--gold btn--block">Order Premiums</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3 class="price-card__name">Box Calculator</h3>
+            <p class="price-card__hint">Planning pasalubong? See your total.</p>
+            <div class="calc">
+              <label class="calc__row">
+                <span>Classics (₱44)</span>
+                <input type="number" min="0" max="99" value="3" id="calcClassic" inputmode="numeric">
+              </label>
+              <label class="calc__row">
+                <span>Premiums (₱49)</span>
+                <input type="number" min="0" max="99" value="3" id="calcPremium" inputmode="numeric">
+              </label>
+              <div class="calc__total">
+                <span id="calcCount">6 doughnuts</span>
+                <strong id="calcTotal">₱279</strong>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn--outline btn--block">Reserve a Box</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <!-- NOTE: Sample reviews. Replace with real customer feedback before going live. -->
+    <section class="section" id="reviews">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Kind Words</p>
+          <h2 class="section__title">Loved by Rosales</h2>
+        </header>
+
+        <div class="slider reveal" id="slider">
+          <div class="slider__track" id="sliderTrack">
+            <figure class="quote">
+              <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>“The Tiramisu doughnut is my new merienda habit. Soft, not too sweet, and the coffee pairs perfectly.”</blockquote>
+              <figcaption><strong>Customer Name</strong><span>Rosales, Pangasinan</span></figcaption>
+            </figure>
+            <figure class="quote">
+              <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>“Brought a box home as pasalubong and it was gone in ten minutes. The Matcha Almond is a must-try!”</blockquote>
+              <figcaption><strong>Customer Name</strong><span>Urdaneta City</span></figcaption>
+            </figure>
+            <figure class="quote">
+              <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <blockquote>“Super affordable for the quality. My kids always ask for Strawberry Sprinkles whenever we're at SM.”</blockquote>
+              <figcaption><strong>Customer Name</strong><span>Tayug, Pangasinan</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="slider__controls">
+            <button class="slider__btn" id="sliderPrev" aria-label="Previous review">&larr;</button>
+            <div class="slider__dots" id="sliderDots"></div>
+            <button class="slider__btn" id="sliderNext" aria-label="Next review">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--cream" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="eyebrow">Good to Know</p>
+          <h2 class="section__title">Frequently asked questions</h2>
+        </header>
+
+        <div class="faq reveal" id="faqList">
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">Where can I find Brevon?</button>
+            <div class="faq__a"><p>Our booth is inside SM City Rosales, Pangasinan. Look for the green-and-white “Brevon” booth under the SM for MSMEs area.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">What are your opening hours?</button>
+            <div class="faq__a"><p>We follow mall hours, daily from 10:00 AM to 9:00 PM. Best-sellers can sell out early, so come by sooner for the full lineup.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">Can I reserve doughnuts or order a box in advance?</button>
+            <div class="faq__a"><p>Yes! Send us a message through the contact form or on Facebook with your flavors and pickup time, and we'll have your box ready.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">Do you accept bulk orders for parties or events?</button>
+            <div class="faq__a"><p>Absolutely. For birthdays, office merienda, and events, message us at least 2 days ahead so we can prepare your order fresh.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">How long do the doughnuts stay fresh?</button>
+            <div class="faq__a"><p>They're best enjoyed on the same day. Cream-filled flavors should be kept cool and eaten within 24 hours.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__q" aria-expanded="false">What payment methods do you accept?</button>
+            <div class="faq__a"><p>We accept cash and GCash at the booth.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <p class="eyebrow">Visit or Message Us</p>
+          <h2 class="section__title">Come grab your daily dose</h2>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__label">Location</span>
+              SM City Rosales, Rosales, Pangasinan
+            </li>
+            <li>
+              <span class="contact__label">Hours</span>
+              Daily, 10:00 AM – 9:00 PM
+            </li>
+            <li>
+              <span class="contact__label">Phone</span>
+              <a href="tel:+639000000000">0900 000 0000</a>
+            </li>
+            <li>
+              <span class="contact__label">Facebook</span>
+              <a href="#" target="_blank" rel="noopener">Brevon Doughnuts &amp; Coffee</a>
+            </li>
+          </ul>
+          <div class="map">
+            <iframe
+              title="Map to SM City Rosales"
+              src="https://www.google.com/maps?q=SM+City+Rosales,+Pangasinan&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <h3 class="form__title">Send us a message</h3>
+          <div class="form__field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Juan Dela Cruz">
+            <small class="form__error"></small>
+          </div>
+          <div class="form__field">
+            <label for="email">Email or mobile</label>
+            <input type="text" id="email" name="email" required placeholder="you@email.com or 09XX XXX XXXX">
+            <small class="form__error"></small>
+          </div>
+          <div class="form__field">
+            <label for="topic">I'd like to</label>
+            <select id="topic" name="topic">
+              <option>Reserve a box</option>
+              <option>Place a bulk / event order</option>
+              <option>Ask a question</option>
+              <option>Share feedback</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Tell us your flavors, quantity, and pickup time"></textarea>
+            <small class="form__error"></small>
+          </div>
+          <button type="submit" class="btn btn--navy btn--block">Send Message</button>
+          <p class="form__success" id="formSuccess" hidden>Thank you! We'll get back to you soon.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="../assets/images/logo.jpg" alt="" class="footer__logo">
+        <p>Your daily dose of delight.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#menu">Menu</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer__copy">&copy; <span id="year"></span> Brevon Doughnuts &amp; Coffee. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
