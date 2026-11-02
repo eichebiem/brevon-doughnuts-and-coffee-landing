@@ -394,8 +394,11 @@
           </div>
         </div>
 
-        <form class="form reveal" id="contactForm" novalidate>
+        <form class="form reveal" id="contactForm" action="https://formspree.io/f/xrppyvja" method="POST" novalidate>
           <h3 class="form__title">Send us a message</h3>
+          <!-- Formspree: email subject line + hidden spam trap (bots fill it, people don't see it) -->
+          <input type="hidden" name="_subject" value="New message from the Brevon website">
+          <input type="text" name="_gotcha" class="form__trap" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="form__field">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required placeholder="Juan Dela Cruz">
@@ -420,8 +423,8 @@
             <textarea id="message" name="message" rows="4" required placeholder="Tell us your flavors, quantity, and pickup time"></textarea>
             <small class="form__error"></small>
           </div>
-          <button type="submit" class="btn btn--navy btn--block">Send Message</button>
-          <p class="form__success" id="formSuccess" hidden>Thank you! We'll get back to you soon.</p>
+          <button type="submit" class="btn btn--navy btn--block" id="formSubmit">Send Message</button>
+          <p class="form__status" id="formStatus" role="status" hidden></p>
         </form>
       </div>
     </section>

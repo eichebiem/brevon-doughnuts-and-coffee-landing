@@ -111,7 +111,7 @@ function initSlider() {
   restart();
 }
 
-/* ---------- FAQ accordion ---------- */
+/* ---------- FAQ ---------- */
 function initFaq() {
   const items = document.querySelectorAll(".faq__item");
 
@@ -132,10 +132,11 @@ function initFaq() {
   });
 }
 
-/* ---------- Contact form (front-end only) ---------- */
+/* ---------- Contact form (sent to Formspree) ---------- */
 function initContactForm() {
   const form = document.getElementById("contactForm");
-  const success = document.getElementById("formSuccess");
+  const submit = document.getElementById("formSubmit");
+  const status = document.getElementById("formStatus");
 
   const setError = (input, message) => {
     const field = input.closest(".form__field");
@@ -143,7 +144,13 @@ function initContactForm() {
     field.querySelector(".form__error").textContent = message;
   };
 
-  form.addEventListener("submit", (e) => {
+  const showStatus = (message, isError = false) => {
+    status.textContent = message;
+    status.classList.toggle("form__status--error", isError);
+    status.hidden = false;
+  };
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let valid = true;
 
@@ -155,10 +162,28 @@ function initContactForm() {
 
     if (!valid) return;
 
-    // TODO: connect to a real service (e.g. Formspree, EmailJS, or your own backend).
-    success.hidden = false;
-    form.reset();
-    setTimeout(() => (success.hidden = true), 5000);
+    submit.disabled = true;
+    submit.textContent = "Sending…";
+    status.hidden = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) throw new Error(`Formspree responded with ${response.status}`);
+
+      showStatus("Thank you! We'll get back to you soon.");
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      showStatus("Sorry, your message didn't go through. Please try again or call us at 0910 605 1604.", true);
+    } finally {
+      submit.disabled = false;
+      submit.textContent = "Send Message";
+    }
   });
 }
 

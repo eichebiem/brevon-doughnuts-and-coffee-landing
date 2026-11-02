@@ -595,7 +595,7 @@ button { font: inherit; cursor: pointer; }
 .form__field.has-error input,
 .form__field.has-error textarea { border-color: #C0392B; }
 .form__error { display: block; min-height: 1em; margin-top: 4px; font-size: 0.78rem; color: #C0392B; }
-.form__success {
+.form__status {
   margin: 16px 0 0;
   padding: 12px;
   border-radius: 12px;
@@ -603,6 +603,9 @@ button { font: inherit; cursor: pointer; }
   color: var(--gold-light);
   text-align: center;
 }
+.form__status--error { background: #FDECEA; color: #C0392B; }
+.form__trap { position: absolute; left: -9999px; }
+.btn:disabled { opacity: .6; cursor: wait; transform: none; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--navy-dark); color: #AFC0DD; padding: 50px 0; }
