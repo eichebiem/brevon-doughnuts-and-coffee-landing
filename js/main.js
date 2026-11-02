@@ -2,7 +2,7 @@
    Brevon Doughnuts & Coffee — Idea 1: "Royal Classic"
    ========================================================= */
 
-const PRICE_CLASSIC = 44;
+const PRICE_REGULAR = 44;
 const PRICE_PREMIUM = 49;
 
 /* ---------- Header shadow on scroll ---------- */
@@ -53,7 +53,7 @@ function initMenuFilter() {
 
 /* ---------- Box calculator ---------- */
 function initCalculator() {
-  const classic = document.getElementById("calcClassic");
+  const regular = document.getElementById("calcRegular");
   const premium = document.getElementById("calcPremium");
   const countEl = document.getElementById("calcCount");
   const totalEl = document.getElementById("calcTotal");
@@ -61,16 +61,16 @@ function initCalculator() {
   const toQty = (input) => Math.max(0, Math.min(99, parseInt(input.value, 10) || 0));
 
   const update = () => {
-    const c = toQty(classic);
+    const r = toQty(regular);
     const p = toQty(premium);
-    const count = c + p;
-    const total = c * PRICE_CLASSIC + p * PRICE_PREMIUM;
+    const count = r + p;
+    const total = r * PRICE_REGULAR + p * PRICE_PREMIUM;
 
     countEl.textContent = `${count} doughnut${count === 1 ? "" : "s"}`;
     totalEl.textContent = `₱${total.toLocaleString("en-PH")}`;
   };
 
-  [classic, premium].forEach((input) => input.addEventListener("input", update));
+  [regular, premium].forEach((input) => input.addEventListener("input", update));
   update();
 }
 

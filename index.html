@@ -114,34 +114,40 @@
 
         <div class="filters reveal" role="tablist" aria-label="Filter flavors">
           <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All Flavors</button>
-          <button class="filter" data-filter="classic" role="tab" aria-selected="false">Classics &middot; ₱44</button>
+          <button class="filter" data-filter="regular" role="tab" aria-selected="false">Regulars &middot; ₱44</button>
           <button class="filter" data-filter="premium" role="tab" aria-selected="false">Premium &middot; ₱49</button>
         </div>
 
         <div class="menu-grid" id="menuGrid">
-          <!-- Classics: ₱44 -->
-          <article class="flavor reveal" data-category="classic">
+          <!-- Regulars: ₱44 -->
+          <article class="flavor reveal" data-category="regular">
             <svg class="flavor__img" style="color:#F49AC1" aria-hidden="true"><use href="#donut"/></svg>
             <h3 class="flavor__name">Strawberry Sprinkles</h3>
             <p class="flavor__desc">Pink strawberry glaze with a shower of rainbow sprinkles.</p>
             <span class="flavor__price">₱44</span>
           </article>
-          <article class="flavor reveal" data-category="classic">
+          <article class="flavor reveal" data-category="regular">
             <svg class="flavor__img" style="color:#5A3825" aria-hidden="true"><use href="#donut"/></svg>
             <h3 class="flavor__name">Chocolate Sprinkles</h3>
             <p class="flavor__desc">Rich chocolate glaze topped with colorful sprinkles.</p>
             <span class="flavor__price">₱44</span>
           </article>
-          <article class="flavor reveal" data-category="classic">
+          <article class="flavor reveal" data-category="regular">
             <svg class="flavor__img" style="color:#3B2418" aria-hidden="true"><use href="#donut"/></svg>
             <h3 class="flavor__name">Nutty Dark Choco</h3>
             <p class="flavor__desc">Dark chocolate glaze with a crunchy nut topping.</p>
             <span class="flavor__price">₱44</span>
           </article>
-          <article class="flavor reveal" data-category="classic">
+          <article class="flavor reveal" data-category="regular">
             <svg class="flavor__img" style="color:#C98A4B" aria-hidden="true"><use href="#donut"/></svg>
             <h3 class="flavor__name">Dulce de Leche</h3>
             <p class="flavor__desc">Sweet, creamy caramel for the classic sweet tooth.</p>
+            <span class="flavor__price">₱44</span>
+          </article>
+          <article class="flavor reveal" data-category="regular">
+            <svg class="flavor__img" style="color:#4A2C1D" aria-hidden="true"><use href="#donut"/></svg>
+            <h3 class="flavor__name">Choco Custard</h3>
+            <p class="flavor__desc">Chocolate-topped and filled with smooth custard.</p>
             <span class="flavor__price">₱44</span>
           </article>
 
@@ -150,12 +156,6 @@
             <svg class="flavor__img" style="color:#F3EBDD" aria-hidden="true"><use href="#donut"/></svg>
             <h3 class="flavor__name">Coconut Cream</h3>
             <p class="flavor__desc">Light coconut cream with toasted coconut flakes.</p>
-            <span class="flavor__price">₱49</span>
-          </article>
-          <article class="flavor reveal" data-category="premium">
-            <svg class="flavor__img" style="color:#4A2C1D" aria-hidden="true"><use href="#donut"/></svg>
-            <h3 class="flavor__name">Choco Custard</h3>
-            <p class="flavor__desc">Chocolate-topped and filled with smooth custard.</p>
             <span class="flavor__price">₱49</span>
           </article>
           <article class="flavor reveal" data-category="premium">
@@ -235,15 +235,16 @@
 
         <div class="pricing">
           <article class="price-card reveal">
-            <h3 class="price-card__name">The Classics</h3>
+            <h3 class="price-card__name">The Regulars</h3>
             <p class="price-card__price"><span>₱</span>44 <small>each</small></p>
             <ul class="price-card__list">
               <li>Strawberry Sprinkles</li>
               <li>Chocolate Sprinkles</li>
               <li>Nutty Dark Choco</li>
               <li>Dulce de Leche</li>
+              <li>Choco Custard</li>
             </ul>
-            <a href="#contact" class="btn btn--outline btn--block">Order Classics</a>
+            <a href="#contact" class="btn btn--outline btn--block">Order Regulars</a>
           </article>
 
           <article class="price-card price-card--featured reveal">
@@ -252,7 +253,6 @@
             <p class="price-card__price"><span>₱</span>49 <small>each</small></p>
             <ul class="price-card__list price-card__list--2col">
               <li>Coconut Cream</li>
-              <li>Choco Custard</li>
               <li>Cookies N' Cream</li>
               <li>Almond Snow Bliss</li>
               <li>Matcha Almond</li>
@@ -268,8 +268,8 @@
             <p class="price-card__hint">Planning pasalubong? See your total.</p>
             <div class="calc">
               <label class="calc__row">
-                <span>Classics (₱44)</span>
-                <input type="number" min="0" max="99" value="3" id="calcClassic" inputmode="numeric">
+                <span>Regulars (₱44)</span>
+                <input type="number" min="0" max="99" value="3" id="calcRegular" inputmode="numeric">
               </label>
               <label class="calc__row">
                 <span>Premiums (₱49)</span>
